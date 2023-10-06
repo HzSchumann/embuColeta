@@ -1,0 +1,225 @@
+<!-- Nav Bar -->
+<nav class="nav-bar">
+  <img src="../assets/images/logo.png" alt="logo ecoleta" class="logo">
+  <ul class="nav-menu">
+    <li><a href="#heros" class="menu-item">Início</a></li>
+    <li><a href="#sobre" class="menu-item">Sobre</a></li>
+    <li><a href="#mapa" class="menu-item">Mapa</a></li>
+    <li><a href="#cadastro" class="menu-item">Cadastro</a></li>
+    <li><a href="#faq" class="menu-item">FAQ</a></li>
+  </ul>
+  <i *ngIf="isMobileLayout" class="fa-solid fa-bars menu-btn mobile-menu-btn" aria-label="menu"
+    (click)="onClickHamburguer()"></i>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero" id="heros">
+  <div class="hero-text">
+    <h1>Você sabe como destinar todo lixo da sua casa?</h1>
+    <p>O time da ECO PONTO pode te ajudar nessa missão.
+      Seja parte dessa mudança.</p>
+    <button mat-flat-button><a href="#cadastro">Quero me cadastrar</a></button>
+  </div>
+  <!-- <div class="hero-image"></div> -->
+  <img class="hero-image" src="../assets/images/hero.png" alt="">
+</section>
+
+<!-- Steps Section -->
+<section class="steps-section" id="sobre">
+
+  <section class="steps">
+    <img src="../assets/images/passo01.png" alt="brinquedos reciclaveis" class="step-image">
+    <div class="step-text">
+      <h1>Conectamos você a recicladores / cooperativas</h1>
+      <p>Conhecas os profissionais que trabalham em
+        Embu-Guaçu com reciclagem e destinação correta dos
+        descartes dos residuos solidos de sua casa</p>
+    </div>
+  </section>
+
+  <section class="steps mobile-background">
+    <div class="step-text">
+      <h1>Orientamos você como fazer a limpeza e te damos dicas para reutilizar obietos</h1>
+      <p>Receba dicas das crianças da Passos Mágicos de como você pode reutilizar ou criar um novo objeto com os objetos
+        que você iria descartar.</p>
+    </div>
+    <img src="../assets/images/passo02.png" alt="brinquedos reciclaveis" class="step-image">
+  </section>
+
+  <section class="steps">
+    <img src="../assets/images/passo03.png" alt="brinquedos reciclaveis" class="step-image">
+    <div class="step-text">
+      <h1>Ganhe pontos e troque por descontos, você também pode destinar esses pontos a ações ou campanhas sociais</h1>
+      <p>Destine corretamente e ganhe pontos para trocar por descontos com nossos parceiros da cidade, ou doe seus
+        pontos para ações e campanhas da Passos Mágicos.</p>
+    </div>
+  </section>
+
+</section>
+
+<!-- Why Section -->
+<div class="why-section">
+  <h1>Por que escolher reciclar com um de nossos parceiros?</h1>
+  <div class="card-row">
+    <div class="why-cards-1">
+
+      <div class="why-card-text">
+
+        <p>Conectamos pessoas com os mesmos propositos</p>
+      </div>
+    </div>
+    <div class="why-cards-2">
+      <div class="why-card-text">
+        <p>Estamos buscando construir um manhã melhor.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card-row">
+    <div class="why-cards-3">
+      <div class="why-card-text">
+        <p>Conheça mais sobre o mundo da reciclagem.</p>
+      </div>
+    </div>
+    <div class="why-cards-4">
+      <div class="why-card-text">
+        <p>Ajude a Passos Mágicos em suas ações.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Map Section -->
+<div class="map-section" id="mapa">
+  <h1>Encontre o nosso parceiro mais próximo de você</h1>
+  <div class="full" id="map"></div>
+</div>
+
+<!-- Form Section -->
+<section class="form-section" id="cadastro">
+  <div class="form-text">
+    <h1>Cadastre a sua empresa no formulário ao lado</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam reiciendis eligendi harum, maxime iste placeat eum
+      blanditiis suscipit quis aliquam!</p>
+  </div>
+
+  <div class="forms">
+    <h2>Formulário para Cadastro</h2>
+
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nome da Empresa</mat-label>
+        <input matInput formControlName="companyName" placeholder="Insira o nome de sua empresa..." required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" placeholder="Insira o e-mail..." required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telephone" placeholder="(XX) XXXXX XXXX" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Descrição da Empresa</mat-label>
+        <textarea matInput formControlName="description" placeholder="Insira a descrição da empresa..."
+          required></textarea>
+      </mat-form-field>
+
+      <div class="button-position">
+        <button type="submit" mat-flat-button color="primary">Cadastrar Empresa</button>
+      </div>
+    </form>
+
+
+  </div>
+</section>
+
+<!-- Enterprise Section -->
+<div class="enterprises">
+  <h1>Empresas que apoiam a EcoPonto</h1>
+
+  <div class="enterprise-cards">
+
+    <div class="enterprise-card">
+      <img src="../assets/images/cacaushow.png" alt="">
+    </div>
+
+    <div class="enterprise-card">
+      <img src="../assets/images/fiap.png" alt="">
+    </div>
+
+    <div class="enterprise-card">
+      <img src="../assets/images/ambev.png" alt="">
+    </div>
+
+    <div class="enterprise-card">
+      <img src="../assets/images/allset.png" alt="">
+    </div>
+
+    <div class="enterprise-card">
+      <img src="../assets/images/itmidia.png" alt="">
+    </div>
+
+  </div>
+</div>
+
+<!-- Accordion Section -->
+<section class="accordion" id="faq">
+  <div class="accordion-section">
+    <h1>Perguntas Frequentes</h1>
+    <mat-accordion>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [collapsedHeight]="'70px'" [expandedHeight]="'70px'">
+          <mat-panel-title>
+            Como faco para destinar meu lixo?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Separe seu lixo entre as opções: papéis e papelões, vidros, plásticos, metais, resíduos orgânicos (resto de
+          comida), madeira, materiais não reciclados e lixos hospitalares (seringa, fitas de glicose, algodão, curativos
+          e gases). Encontre um de nossos parceiros que faz o descarte do seu material separado e agende uma coleta em
+          sua casa ou vá até um dos pontos de descarte.</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [collapsedHeight]="'70px'" [expandedHeight]="'70px'">
+          <mat-panel-title>
+            Posso me cadastrar como RECICLADOR?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p></p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [collapsedHeight]="'70px'" [expandedHeight]="'70px'">
+          <mat-panel-title>
+            Como faço para trocar meu lixo por pontos?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p></p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [collapsedHeight]="'70px'" [expandedHeight]="'70px'">
+          <mat-panel-title>
+            Como poderei utilizar meus pontos?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p></p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header [collapsedHeight]="'70px'" [expandedHeight]="'70px'">
+          <mat-panel-title>
+            Como faço para enviar uma sugestão de reutilização de um objeto?
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p></p>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </div>
+</section>

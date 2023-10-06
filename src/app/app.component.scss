@@ -1,0 +1,599 @@
+// Formatações Genéricas 
+a {
+    text-decoration: none;
+    color: #000;
+    transition: .5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+// <-------- NavBar Section ------->
+.nav-bar {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7eacc;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .5s;
+
+    h1 {
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        color: #0d3a0e;
+    }
+
+    .menu-item {
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        margin-right: 3rem;
+    }
+
+
+    .nav-menu li {
+        margin: 0 30px;
+    }
+
+    .nav-menu li::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background-color: #0d3a0e;
+        display: block;
+        margin: auto;
+        transition: .5s;
+    }
+
+    .nav-menu li:hover::after {
+        width: 100%;
+    }
+
+    .logo {
+        height: 30px;
+        margin-top: 0.7rem;
+        margin-left: 3rem;
+        background-image: url('../assets/images/logo.png');
+        background-size: cover;
+    }
+
+    // Menu Sanduíche 
+    .menu-btn {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 32px;
+        cursor: pointer;
+        color: #ffffff;
+    }
+}
+
+// <-------- Hero Section ------->
+.hero {
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    background-color: #f7eacc;
+
+    .hero-text {
+        width: 50%;
+        padding-left: 3rem;
+        padding-right: 14rem;
+
+        h1 {
+            font-size: 54px;
+            margin-bottom: 1rem;
+            color: #1b6a15;
+        }
+
+        p {
+            margin-bottom: 2rem;
+            font-weight: 100;
+        }
+    }
+
+    .hero-image {
+        height: 400px;
+        width: 50%;
+        margin-left: 3rem;
+    }
+
+    button {
+        background-color: #0d3a0e;
+
+        a {
+            color: #FFF;
+        }
+    }
+}
+
+// <-------- Steps Section ------->
+.steps-section {
+    margin-top: 5rem;
+
+    .steps {
+        padding: 1rem;
+        display: flex;
+
+        .step-text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10rem;
+
+            h1 {
+                font-size: 28px;
+                color: #28a31f;
+            }
+
+            p {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+
+        .step-image {
+            height: 300px;
+            width: 600px;
+            margin: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #e5e5e5;
+            border-radius: 6px;
+        }
+    }
+}
+
+// <-------- Why Section ------->
+.why-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .card-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .why-cards-1 {
+        width: 550px;
+        height: 300px;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(rgba(4, 9, 30, .3), rgba(4, 9, 30, .9)), url("../assets/images/beneficio01.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .why-cards-2 {
+        width: 550px;
+        height: 300px;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(rgba(4, 9, 30, .3), rgba(4, 9, 30, .9)), url("../assets/images/beneficio02.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .why-cards-3 {
+        width: 550px;
+        height: 300px;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(rgba(4, 9, 30, .3), rgba(4, 9, 30, .9)), url("../assets/images/beneficio03.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .why-cards-4 {
+        width: 550px;
+        height: 300px;
+        margin: 1rem;
+        padding: 2rem;
+        border-radius: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: linear-gradient(rgba(4, 9, 30, .3), rgba(4, 9, 30, .9)), url("../assets/images/beneficio04.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
+    }
+
+    .why-card-text {
+        font-size: 26px;
+        font-weight: 700;
+        color: #ffffff;
+    }
+}
+
+// <-------- Map Section ------->
+.map-section {
+    margin-top: 9rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    .full {
+        height: 70vh;
+        width: 100vw;
+    }
+}
+
+// <-------- Form Section ------->
+.form-section {
+    width: 100%;
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+
+    .form-text {
+        padding-left: 3rem;
+        padding-right: 26rem;
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-weight: 100;
+        }
+    }
+
+    .forms {
+        width: 50%;
+        padding-right: 3rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .button-position {
+            float: right;
+
+            button {
+                background-color: #0d3a0e;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+// <----- Enterprises Section ------>
+.enterprises {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .enterprise-cards {
+        margin-top: 3rem;
+        display: flex;
+
+        .enterprise-card {
+            margin-right: 3rem;
+
+            mat-card {
+                justify-content: center;
+                height: 100px;
+                width: 350px;
+
+                .example-header-image {
+                    height: 70px;
+                    width: 70px;
+                    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+                    background-size: cover;
+                }
+
+                mat-card-title {
+                    margin-top: 1rem;
+                    margin-left: 1rem;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+// <-------- Accordion Section ------>
+.accordion {
+    width: 100%;
+    height: 60vh;
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+
+    .accordion-section {
+        width: 80%;
+
+        h1 {
+            margin-bottom: 3rem;
+            font-size: 26px;
+        }
+    }
+}
+
+// Responsividade
+
+@media(max-width: 1000px) {
+    .menu-btn {
+        display: block;
+    }
+
+    // <-------- NavBar Section Mobile------->
+    .nav-bar {
+        padding: 0;
+
+        .nav-menu {
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background-color: #000;
+            margin-top: -1100px;
+            margin-right: 0;
+            transition: .5s;
+        }
+
+        .mobile-menu {
+            margin-top: 0;
+        }
+
+        .nav-menu li {
+            margin: 30px auto;
+        }
+
+        .nav-menu a {
+            text-transform: uppercase;
+        }
+
+
+    }
+
+    // <-------- Hero Section Mobile------->
+    .hero {
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: center;
+
+        .hero-text {
+            width: 90%;
+            padding-left: 0rem;
+            padding-right: 0rem;
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                margin-bottom: 2rem;
+                font-size: 16px;
+            }
+        }
+
+        .hero-image {
+            height: 200px;
+            width: 100%;
+            margin-left: 0rem;
+            margin-top: 3rem;
+        }
+
+    }
+
+    // <-------- Steps Section Mobile ------->
+    .steps-section {
+        margin-top: rem;
+
+        .mobile-background {
+            background-color: #385d39;
+            color: #FFF;
+        }
+
+        .steps {
+            padding: 1rem;
+            flex-direction: column;
+
+            .step-text {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+
+                h1 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .step-image {
+                height: 200px;
+                width: 100%;
+                margin: 0rem;
+            }
+        }
+    }
+
+    // <-------- Why Section ------->
+    .why-section {
+        padding: 1rem;
+        background-color: #f7eacc;
+        height: auto;
+
+        h1 {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 26px;
+        }
+
+        .card-row {
+            flex-direction: column;
+        }
+
+        .why-cards-1 {
+            width: 100%;
+            height: 200px;
+        }
+
+        .why-cards-2 {
+            width: 100%;
+            height: 200px;
+        }
+
+        .why-cards-3 {
+            width: 100%;
+            height: 200px;
+        }
+
+        .why-cards-4 {
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    // <-------- Map Section Mobile------->
+    .map-section {
+        margin-top: 3rem;
+
+        h1 {
+            margin: 1rem;
+            margin-bottom: 3rem;
+            font-size: 24px;
+        }
+    }
+
+    // <-------- Form Section Mobile------->
+    .form-section {
+        width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        padding: 1rem;
+        flex-direction: column;
+
+        .form-text {
+            padding-left: 0rem;
+            padding-right: 0rem;
+            margin-bottom: 2rem;
+
+            h1 {
+                font-size: 26px;
+            }
+
+            p {
+                font-weight: 100;
+            }
+        }
+
+        .forms {
+            width: 100%;
+            padding-right: 0rem;
+
+            .button-position {
+                float: none;
+
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // <----- Enterprises Section Mobile------>
+    .enterprises {
+        padding: 1rem;
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 2rem;
+        }
+
+        .enterprise-cards {
+            width: 100%;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    // <-------- Accordion Section Mobile------>
+    .accordion {
+        margin-top: 2rem;
+        padding: 1rem;
+
+        .accordion-section {
+            width: 100%;
+
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}
